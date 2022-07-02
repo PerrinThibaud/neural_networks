@@ -7,9 +7,9 @@ digraph G {
             size = "7.75,7.25" ];
 
     rankdir = LR;
-    splines=false;
+    splines=line;
     edge[style="invis"];
-    ranksep= .5;
+    ranksep= .25;
     {
         node [shape=plaintext];
         x1 [label=<x1>];
@@ -17,11 +17,8 @@ digraph G {
     }
     {
         node [shape=circle, penwidth=5, colorscheme=rdylbu11, style=filled, color=white, fillcolor=11, fontcolor=6];
-        a12 [label=<Z>];
-    }
-    {
-        node [shape=plaintext];
-        O1 [label=<y>];
+        a12 [label=<b> shape=plaintext, penwidth=0, style="", colorscheme=rdylbu11, color=2, fontcolor=2];
+        a13 [label=<Z>];
     }
     {
         rank=same;
@@ -29,22 +26,16 @@ digraph G {
     }
     {
         rank=same;
-        a12;
+        a12->a13;
     }
-    {
-        rank=same;
-        O1;
-    }
-    l0 [shape=plaintext, label="input"];
+    l0 [shape=plaintext, label=""];
     l0->x1;
     {rank=same; l0;x1};
     l1 [shape=plaintext, label=""];
     l1->a12;
     {rank=same; l1;a12};
-    l2 [shape=plaintext, label="output"];
-    l2->O1;
-    {rank=same; l2;O1};
-    edge[style=solid, arrowhead=none, tailport=e, headport=_];
-    {x1; x2} -> {a12};
-    {a12} -> {O1};
+    edge[style=solid, tailport=e, headport=_];
+    x1 -> {a13} [label=<w<SUB>1</SUB>>, colorscheme=rdylbu11, fontcolor=2];
+    x2 -> {a13} [label=<w<SUB>2</SUB>>, colorscheme=rdylbu11, fontcolor=2];
+    a12 -> {a13}[tailport=_, headport=n, colorscheme=rdylbu11, color=2, fillcolor=2];
 }
