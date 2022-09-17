@@ -17,6 +17,9 @@ pandas = {version = "*", index = "downloadpytorch"}
 torch = {version = "*", index = "downloadpytorch"}
 torchaudio = {version = "*", index = "downloadpytorch"}
 torchvision = {version = "*", index = "downloadpytorch"}
+scikit-learn = "*"
+plotly = "*"
+h5py = "*"
 
 [dev-packages]
 
