@@ -1,0 +1,50 @@
+
+digraph G {
+
+     graph[ fontname = "Helvetica-Oblique",
+            fontsize = 12,
+            label = "",
+            size = "7.75,7.25" ];
+
+    rankdir = LR;
+    splines=false;
+    edge[style="invis"];
+    ranksep= .5;
+    {
+        node [shape=plaintext];
+        x1 [label=<x1>];
+        x2 [label=<x2>];
+    }
+    {
+        node [shape=circle, penwidth=5, colorscheme=rdylbu11, style=filled, color=white, fillcolor=11, fontcolor=6];
+        a12 [label=<Z>];
+    }
+    {
+        node [shape=plaintext];
+        O1 [label=<y>];
+    }
+    {
+        rank=same;
+        x1->x2;
+    }
+    {
+        rank=same;
+        a12;
+    }
+    {
+        rank=same;
+        O1;
+    }
+    l0 [shape=plaintext, label="input"];
+    l0->x1;
+    {rank=same; l0;x1};
+    l1 [shape=plaintext, label=""];
+    l1->a12;
+    {rank=same; l1;a12};
+    l2 [shape=plaintext, label="output"];
+    l2->O1;
+    {rank=same; l2;O1};
+    edge[style=solid, arrowhead=none, tailport=e, headport=_];
+    {x1; x2} -> {a12};
+    {a12} -> {O1};
+}

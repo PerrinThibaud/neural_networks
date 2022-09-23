@@ -8,27 +8,23 @@ url = "https://download.pytorch.org/whl/cu113"
 verify_ssl = true
 name = "downloadpytorch"
 
-[[source]]
-url = "https://download.pytorch.org/whl/cu113"
-verify_ssl = true
-name = "downloadpytorch"
-
-[[source]]
-url = "https://download.pytorch.org/whl/cu113"
-verify_ssl = true
-name = "downloadpytorch"
-
 [packages]
-notebook = "*"
-ipywidgets = "*"
-numpy = "*"
-pandas = "*"
+graphviz = {version = "*", index = "downloadpytorch"}
+jupyter = {version = "*", index = "downloadpytorch"}
+matplotlib = {version = "*", index = "downloadpytorch"}
+numpy = {version = "*", index = "downloadpytorch"}
+pandas = {version = "*", index = "downloadpytorch"}
 torch = {version = "*", index = "downloadpytorch"}
-torchvision = {version = "*", index = "downloadpytorch"}
 torchaudio = {version = "*", index = "downloadpytorch"}
-jupyter-contrib-nbextensions = "*"
+torchvision = {version = "*", index = "downloadpytorch"}
+scikit-learn = "*"
+plotly = "*"
+h5py = "*"
+tqdm = "*"
+ann-visualizer = "*"
+viznet = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.9"
+python_version = "3.10"
