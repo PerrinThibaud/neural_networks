@@ -20,6 +20,7 @@ torchvision = {version = "*", index = "downloadpytorch"}
 scikit-learn = "*"
 plotly = "*"
 h5py = "*"
+tqdm = "*"
 
 [dev-packages]
 
