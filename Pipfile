@@ -21,6 +21,8 @@ scikit-learn = "*"
 plotly = "*"
 h5py = "*"
 tqdm = "*"
+ann-visualizer = "*"
+viznet = "*"
 
 [dev-packages]
 
